@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Chute API module.
+ *
+ */
+
+
+/**
+ * Implements hook_menu().
+ */
+function chute_api_menu() {
+  $items = array();
+
+  $items['admin/config/services/chute'] = array(
+    'title' => 'Chute',
+    'description' => 'Configure the Drupal integration for Chute',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('chute_api_settings_form'),
+    'access arguments' => array('administer chute api'),
+    'file' => 'chute_api.admin.inc',
+  );
+
+  $items['admin/config/services/chute/api'] = array(
+    'title' => 'API',
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'weight' => -10,
+  );
+
+  return $items;
+}
+
+
+/**
+ * Implements hook_permission().
+ */
+function chute_api_permission() {
+  return array(
+    'administer chute' => array(
+      'title' => t('Administer Chute API Settings'),
+      'description' => t('Set and change Chute API configure.'),
+    ),
+  );
+}

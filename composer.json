@@ -1,0 +1,18 @@
+{
+    "name": "drupal/chute",
+    "type": "drupal-module",
+    "description": "Chute API integration for Drupal — http://www.getchute.com/",
+    "keywords": ["chute"],
+    "homepage": "http://drupal.org/project/chute",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Grant Gaudet",
+            "email": "grant@greylabel.net",
+            "homepage": "http://greylabel.net/"
+        }
+    ],
+    "require": {
+        "greylabel/chute-sdk-v2-php": "dev-master"
+    }
+}

@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Provides installation functions for Chute API module.
+ *
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function chute_api_uninstall() {
+  // Clear-out module-specific variables.
+  variable_del('chute_api_app_id');
+  variable_del('chute_api_app_secret');
+  variable_del('chute_api_app_token');
+}

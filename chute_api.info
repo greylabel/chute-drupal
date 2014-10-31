@@ -1,0 +1,10 @@
+name = Chute
+description = Chute API integration for Drupal — http://www.getchute.com/.
+core = 7.x
+package = Chute
+configure = admin/config/services/chute/api
+
+; files[] =
+
+dependencies[] = ctools
+dependencies[] = composer_manager
